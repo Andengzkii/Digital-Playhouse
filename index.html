@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game List - Digital Playhouse</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Digital Playhouse</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="game-details.html">Game Details</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="about.html">About </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Welcome to Digital Playhouse</h2>
+        <p>Welcome to Digital Playhouse, where creativity meets technology! At Digital Playhouse, 
+            we are passionate about transforming innovative ideas into immersive digital experiences. 
+            Whether you're a gamer seeking the next big adventure, a tech enthusiast eager to explore cutting-edge applications, 
+            or a developer looking for inspiration, Digital Playhouse is your ultimate playground.</p>
+    </section>
+
+    <!-- Featured Games Section -->
+    <section class="featured-games">
+
+        <h2>Featured Games</h2>
+
+        <div class="game-list">
+            <div class="game-item">
+                <img src="img/rlo.png" alt="Riches Lucky Ox">
+                <h3>Riches Lucky Ox</h3>
+            </div>
+
+            <div class="game-item">
+                <img src="img/se.png" alt="Starlight Empress">
+                <h3>Starlight Empress</h3>
+            </div>
+
+            <div class="game-item">
+                <img src="img/og.png" alt="Olympus Gateway">
+                <h3>Olympus Gateway</h3>
+            </div>
+
+            <div class="game-item">
+                <img src="img/fh.png" alt="Fortune Hopper">
+                <h3>Fortune Hopper</h3>
+            </div>
+
+        </div>
+    </section>
+    
+
+    <!-- News Updates Section -->
+    <section class="news-updates">
+    <h2>Latest News</h2>
+    <div class="news-item">
+        <h3>Game Release: New Adventure Awaits!</h3>
+        <p>Get ready for an exciting new game release that promises to bring fresh adventures and challenges. The game features stunning graphics, engaging gameplay, and a host of new characters to discover. Don't miss out on the chance to be among the first to experience this thrilling new title!</p>
+    </div>
+    <div class="news-item">
+        <h3>Major Update: Improved Features and Bug Fixes</h3>
+        <p>Our latest update brings a range of improvements to enhance your gaming experience. We've introduced new features, optimized performance, and addressed various bugs reported by our community. Check out the update notes to learn more about the enhancements and how they benefit your gameplay.</p>
+    </div>
+    <div class="news-item">
+        <h3>Community Event: Join Us for a Special Tournament</h3>
+        <p>We are excited to announce a special tournament for our gaming community! Compete against other players for a chance to win exclusive rewards and bragging rights. The event will feature multiple rounds, leaderboards, and special challenges. Mark your calendar and get ready to showcase your skills!</p>
+    </div>
+    <!-- Add more news items as needed -->
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024  Digital Playhouse. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for Modal
+        const modal = document.getElementById('exampleModal');
+        const closeModal = document.querySelector('.close-modal');
+
+        document.querySelector('.interactive-button').addEventListener('click', function() {
+            modal.style.display = 'flex';
+        });
+
+        closeModal.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>
