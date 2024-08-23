@@ -1,7 +1,6 @@
-// Function to get the user's location using IPinfo API
+// Function to get the user's location using GeoJS API
 async function getUserLocation() {
-    const apiKey = '83402f6feec1bc'; // Replace with your actual IPinfo API key
-    const apiUrl = `https://ipinfo.io/json?token=${apiKey}`; // IPinfo API endpoint
+    const apiUrl = 'https://get.geojs.io/v1/ip/country.json'; // GeoJS API endpoint
 
     try {
         const response = await fetch(apiUrl);
@@ -26,7 +25,7 @@ async function redirectBasedOnLocation() {
     console.log('Current Location:', currentLocation);
     console.log('Country Code:', countryCode);
 
-    if (countryCode === 'BR') {
+    if (countryCode === 'BR') { // 'BR' is the country code for Brazil
         if (!currentLocation.includes('5518win.com')) {
             console.log('Redirecting to 5518win.com');
             window.location.href = 'https://5518win.com/index?type=4&channelId=7381&fb_dynamic_pixel=2774791946023763';
