@@ -28,7 +28,7 @@ async function redirectBasedOnLocation() {
         }
     } else {
         if (!currentLocation.includes('newlandingpage.onrender.com')) {
-            window.location.href = 'https://newlandingpage.onrender.com';
+            window.location.href = 'https://digital-playhouse.onrender.com';
         }
     }
 }
