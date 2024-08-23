@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background: radial-gradient(486px at 37.5% -17.2%, rgb(255, 2, 2) 0%, rgb(254, 78, 172) 90%);
+    background: radial-gradient(circle at 81.9% 53.5%, rgb(173, 53, 53) 16.3%, rgb(240, 60, 60) 100.2%);
     color: #fff;
     padding: 1rem 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -81,7 +81,7 @@ header nav ul li a:active {
 /* Featured Games */
 .featured-games {
     padding: 3rem 2rem;
-    background-color: #fff;
+    background: linear-gradient(177.9deg, rgb(58, 62, 88) 3.6%, rgb(119, 127, 148) 105.8%);
     text-align: center;
     border-bottom: 5px solid #f4f4f4;
 }
@@ -90,7 +90,7 @@ header nav ul li a:active {
     font-size: 2rem;
     margin-bottom: 2rem;
     animation: fadeIn 2s ease-out;
-    color: #940000;
+    color: #ffffff;
 }
 
 .game-list {
@@ -150,11 +150,11 @@ header nav ul li a:active {
     margin-bottom: 2rem;
     text-align: center;
     animation: fadeIn 2s ease-out;
-    color: #940000;
+    color: #000000;
 }
 
 .news-item {
-    background-color: #fff;
+    background-color: #e9a2a2;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1rem;
@@ -382,13 +382,13 @@ footer {
 
 .game-details h2 {
     font-size: 2.5rem; /* Larger heading for impact */
-    color: #e63946; /* Rich red color for emphasis */
+    color: #000000; /* Rich red color for emphasis */
     margin-bottom: 1.5rem; /* Adequate margin for spacing */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Soft text shadow for depth */
 }
 
 .game-card {
-    background: #fff;
+    background: #b2dfdb;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 1rem;
@@ -403,13 +403,13 @@ footer {
 
 .game-card h3 {
     font-size: 1.5rem;
-    color: #333;
+    color: #000000;
     margin: 1rem 0;
 }
 
 .game-card p {
     font-size: 1rem;
-    color: #666;
+    color: #000000;
     line-height: 1.6;
 }
 
@@ -700,7 +700,7 @@ section.about ul li strong {
 
 /* Heading 3 hover effect */
 .news h3:hover {
-    color: #004d40; /* Darker color on hover */
+    color: #b2dfdb; /* Darker color on hover */
     transition: color 0.3s ease; /* Smooth transition */
 }
 
