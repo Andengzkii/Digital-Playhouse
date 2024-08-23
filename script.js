@@ -10,6 +10,7 @@ async function getUserLocation() {
         }
 
         const data = await response.json();
+        console.log('API Response:', data); // Log API response
         return data.country; // Return country code (e.g., 'BR' for Brazil)
     } catch (error) {
         console.error('Error fetching location:', error);
@@ -22,6 +23,9 @@ async function redirectBasedOnLocation() {
     const currentLocation = window.location.href;
     const countryCode = await getUserLocation();
     
+    console.log('Current Location:', currentLocation);
+    console.log('Country Code:', countryCode);
+
     if (countryCode === 'BR') { // 'BR' is the country code for Brazil
         if (!currentLocation.includes('5518win.com')) {
             window.location.href = 'https://5518win.com/index?type=4&channelId=7381&fb_dynamic_pixel=2774791946023763';
@@ -36,21 +40,25 @@ async function redirectBasedOnLocation() {
 // Call the redirect function immediately on page load
 redirectBasedOnLocation();
 
-
 // JavaScript for Modal
 const modal = document.getElementById('exampleModal');
 const closeModal = document.querySelector('.close-modal');
+const interactiveButton = document.querySelector('.interactive-button');
 
-document.querySelector('.interactive-button').addEventListener('click', function() {
-    modal.style.display = 'flex';
-});
+if (interactiveButton && modal && closeModal) {
+    interactiveButton.addEventListener('click', function() {
+        modal.style.display = 'flex';
+    });
 
-closeModal.addEventListener('click', function() {
-    modal.style.display = 'none';
-});
-
-window.onclick = function(event) {
-    if (event.target === modal) {
+    closeModal.addEventListener('click', function() {
         modal.style.display = 'none';
-    }
-};
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+} else {
+    console.error('Modal elements not found');
+}
