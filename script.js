@@ -26,19 +26,23 @@ async function redirectBasedOnLocation() {
     console.log('Current Location:', currentLocation);
     console.log('Country Code:', countryCode);
 
-    if (countryCode === 'BR') { // 'BR' is the country code for Brazil
+    if (countryCode === 'BR') {
         if (!currentLocation.includes('5518win.com')) {
+            console.log('Redirecting to 5518win.com');
             window.location.href = 'https://5518win.com/index?type=4&channelId=7381&fb_dynamic_pixel=2774791946023763';
         }
     } else {
         if (!currentLocation.includes('newlandingpage.onrender.com')) {
+            console.log('Redirecting to digital-playhouse.onrender.com');
             window.location.href = 'https://digital-playhouse.onrender.com/';
         }
     }
 }
 
-// Call the redirect function immediately on page load
-redirectBasedOnLocation();
+// Call the redirect function when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    redirectBasedOnLocation();
+});
 
 // JavaScript for Modal
 const modal = document.getElementById('exampleModal');
