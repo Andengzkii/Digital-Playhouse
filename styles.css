@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background: #940000;
+    background: radial-gradient(486px at 37.5% -17.2%, rgb(255, 2, 2) 0%, rgb(254, 78, 172) 90%);
     color: #fff;
     padding: 1rem 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

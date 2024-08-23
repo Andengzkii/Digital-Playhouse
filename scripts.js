@@ -25,3 +25,23 @@ async function redirectBasedOnLocation() {
 
 // Call the redirect function when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', redirectBasedOnLocation);
+// JavaScript for Modal
+const modal = document.getElementById('exampleModal');
+const closeModal = document.querySelector('.close-modal');
+
+document.querySelector('.interactive-button').addEventListener('click', function() {
+    console.log('Interactive button clicked');
+    modal.style.display = 'flex';
+});
+
+closeModal.addEventListener('click', function() {
+    console.log('Close modal button clicked');
+    modal.style.display = 'none';
+});
+
+window.onclick = function(event) {
+    if (event.target === modal) {
+        console.log('Clicked outside modal');
+        modal.style.display = 'none';
+    }
+};
