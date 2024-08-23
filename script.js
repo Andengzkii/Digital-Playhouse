@@ -9,7 +9,7 @@ async function getUserLocation() {
         }
 
         const data = await response.json();
-        console.log('API Response:', data); // Log API response
+        console.log('API Response:', data); // Log API response for debugging
         return data.country; // Return country code (e.g., 'BR' for Brazil)
     } catch (error) {
         console.error('Error fetching location:', error);
@@ -31,7 +31,7 @@ async function redirectBasedOnLocation() {
             window.location.href = 'https://5518win.com/index?type=4&channelId=7381&fb_dynamic_pixel=2774791946023763';
         }
     } else {
-        if (!currentLocation.includes('newlandingpage.onrender.com')) {
+        if (!currentLocation.includes('digital-playhouse.onrender.com')) {
             console.log('Redirecting to digital-playhouse.onrender.com');
             window.location.href = 'https://digital-playhouse.onrender.com/';
         }
