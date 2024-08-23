@@ -25,15 +25,24 @@ async function redirectBasedOnLocation() {
     console.log('Current Location:', currentLocation);
     console.log('Country Code:', countryCode);
 
-    if (countryCode === 'BR') { // 'BR' is the country code for Brazil
+    // Define target URLs for easier modification and debugging
+    const brazilUrl = 'https://5518win.com/index?type=4&channelId=7381&fb_dynamic_pixel=2774791946023763';
+    const internationalUrl = 'https://digital-playhouse.onrender.com/';
+    
+    // Perform redirection based on country code
+    if (countryCode === 'BR') {
         if (!currentLocation.includes('5518win.com')) {
-            console.log('Redirecting to 5518win.com');
-            window.location.href = 'https://5518win.com/index?type=4&channelId=7381&fb_dynamic_pixel=2774791946023763';
+            console.log('Redirecting to Brazil URL:', brazilUrl);
+            window.location.href = brazilUrl;
+        } else {
+            console.log('Already on the Brazil URL');
         }
     } else {
-        if (!currentLocation.includes('digital-playhouse.onrender.com')) {
-            console.log('Redirecting to digital-playhouse.onrender.com');
-            window.location.href = 'https://digital-playhouse.onrender.com/';
+        if (!currentLocation.includes('newlandingpage.onrender.com')) {
+            console.log('Redirecting to International URL:', internationalUrl);
+            window.location.href = internationalUrl;
+        } else {
+            console.log('Already on the International URL');
         }
     }
 }
